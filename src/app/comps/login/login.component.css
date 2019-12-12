@@ -1,0 +1,21 @@
+.example-form {
+    min-width: 200px;
+    max-width: 700px;
+    width: 100%;
+    margin-top: 20%;
+    margin-left: 32%;
+    /* background-color: blue; */
+  }
+  
+  .example-full-width {
+    width: 100%;
+    background-color:lightskyblue;
+  }
+  mat-form-field {
+    text-align: center;
+  }
+  button{
+    margin-left: 49.5%;
+  }
+
+

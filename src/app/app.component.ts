@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { LoginService } from './serviss/login.service';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'd';
+  title = 'datal';
+
+  constructor(private svslog:LoginService){}
+
 }

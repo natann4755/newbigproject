@@ -1,0 +1,36 @@
+
+<div class="example-container">
+    <form [formGroup]="newItem">
+   
+    <!-- <mat-select formControlName="userId" placeholder="Select">
+         <mat-option  value="1">user 1</mat-option>
+         <mat-option  value="2">user 2</mat-option>
+         <mat-option  value="3">user 3</mat-option>
+         <mat-option  value="4">user 4</mat-option>
+         <mat-option  value="5">user 5</mat-option>
+         <mat-option  value="6">user 6</mat-option>
+         <mat-option  value="7">user 7</mat-option>
+         <mat-option  value="8">user 8</mat-option>
+         <mat-option  value="9">user 9</mat-option>
+         <mat-option  value="10">user 10</mat-option>
+                  </mat-select> <br> -->
+    <mat-form-field>
+      <input formControlName="userId" matInput placeholder="Input userId ">
+    </mat-form-field> <br>
+    <mat-form-field>
+        <input formControlName="id" matInput placeholder="Input id">
+    </mat-form-field> <br>
+    <mat-form-field>
+        <input formControlName="title" matInput placeholder="Input title">
+    </mat-form-field> <br>
+    <mat-form-field>
+        <input formControlName="body" matInput placeholder="Input body">
+    </mat-form-field>
+  
+       
+    <br>
+
+    <button (click)= "AddItem()" mat-button>addpost</button>
+  
+        </form>
+  </div>

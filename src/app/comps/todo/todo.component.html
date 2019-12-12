@@ -1,0 +1,108 @@
+<app-navige></app-navige>
+
+
+
+<div _ngcontent-neo-c512="" class="component-page-header docs-primary-header">
+        <button _ngcontent-neo-c512="" mat-button="" class="sidenav-toggle mat-button mat-button-base">
+            <span class="mat-button-wrapper">
+            </span>
+            <div matripple="" class="mat-button-ripple mat-ripple"></div>
+            <div class="mat-button-focus-overlay"></div>
+        </button>
+            <h2 _ngcontent-neo-c512="" focusonnavigation="" tabindex="-1">todo</h2>
+    </div>
+    
+    <form class="example-form">
+            <mat-form-field class="example-full-width">
+               <input (input)="userId = $event.target.value" matInput placeholder="serch by userId" value="">
+            </mat-form-field>
+            <mat-form-field class="example-full-width">
+                 <input (input)="id = $event.target.value" matInput placeholder="serch by id " value="">
+            </mat-form-field>
+            <mat-form-field class="example-full-width">
+                <input (input)="title = $event.target.value" matInput placeholder="serch by title" value="">
+           </mat-form-field>
+
+           <mat-radio-group aria-label="Select an option">
+            <mat-radio-button (input)="completed = true" value="1" >true</mat-radio-button>
+            <mat-radio-button (input)="completed = false" value="2" >false</mat-radio-button>
+          </mat-radio-group>
+            <!-- <mat-form-field class="example-full-width">
+                <input (input)="completed = $event.target.value" matInput placeholder="serch by completed" type="checkbox" value="">
+            </mat-form-field> -->
+    </form>
+
+<!--     
+    <button (click)= "pageAddItem()" mat-button>addpost</button> 
+    
+    <button (click)= "mypost()" mat-button>my post</button>
+    
+    <button (click)= "allpost()" mat-button>all post</button>  -->
+    
+    
+    
+    <!-- <p *ngIf="svsto.data && svsus.data" >
+    <mat-accordion *ngFor = "let t of svsto.data | pitodo : userId : id : title : completed">
+            <mat-expansion-panel>
+              <mat-expansion-panel-header>
+                <mat-panel-title>
+                  to do from : {{svsus.findnamebyid(t.userId)}}
+                </mat-panel-title>
+                <mat-panel-description>
+                    to do id : {{t.id}}
+                </mat-panel-description>
+              </mat-expansion-panel-header>
+          
+              <app-todo [tod]="t"></app-todo>
+    
+              
+    
+    
+            </mat-expansion-panel>
+            <mat-expansion-panel (opened)="panelOpenState = true"
+                                 (closed)="panelOpenState = false">
+                               
+             
+            </mat-expansion-panel>
+          </mat-accordion>
+        </p>
+    
+ -->
+
+
+ -->
+
+
+
+
+
+
+
+<form [formGroup]='newtodo' (ngSubmit)="addtodo()">
+    <h2>add new to do</h2>
+    userId : <input formControlName='userId'> <br>
+    id : <input formControlName='id'> <br>
+    title : <input formControlName='title'> <br>
+    completed : <input type="checkbox" formControlName='completed'> <br>
+    <button>send</button>
+
+
+
+</form>
+<div>
+    <h1>list of all todos</h1>
+
+    <ul *ngIf="svsto.data">
+        <li *ngFor = "let t of svsto.data">
+            userId : {{t.userId}} <br>
+            id : {{t.id}} <br>
+            title : {{t.title}} <br>
+            completed : {{t.completed}} <br>
+            <br>
+        </li>
+    </ul>
+
+
+</div>
+
+

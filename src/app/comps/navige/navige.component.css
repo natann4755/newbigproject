@@ -1,0 +1,13 @@
+.component-page-header[_ngcontent-neo-c512] {
+    display: flex;
+    position: fixed;
+    align-items: center;
+    width: 100%;
+    height: 10%;
+}
+.docs-primary-header {
+    background: #6878d4;
+}
+button{
+    color: black;
+}

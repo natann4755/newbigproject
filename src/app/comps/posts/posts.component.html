@@ -1,0 +1,61 @@
+<app-navige></app-navige>
+<div _ngcontent-neo-c512="" class="component-page-header docs-primary-header">
+    <button _ngcontent-neo-c512="" mat-button="" class="sidenav-toggle mat-button mat-button-base">
+        <span class="mat-button-wrapper">
+        </span>
+        <div matripple="" class="mat-button-ripple mat-ripple"></div>
+        <div class="mat-button-focus-overlay"></div>
+    </button>
+        <h2 _ngcontent-neo-c512="" focusonnavigation="" tabindex="-1">post</h2>
+</div>
+
+<form class="example-form">
+        <mat-form-field class="example-full-width">
+           <input (input)="titel = $event.target.value" matInput placeholder="serch by titel" value="">
+        </mat-form-field>
+        <mat-form-field class="example-full-width">
+             <input (input)="body = $event.target.value" matInput placeholder="serch by body" value="">
+        </mat-form-field>
+        <mat-form-field class="example-full-width">
+            <input (input)="userid = $event.target.value" matInput placeholder="serch by userid" value="">
+       </mat-form-field>
+        <mat-form-field class="example-full-width">
+            <input (input)="id = $event.target.value" matInput placeholder="serch by id" value="">
+        </mat-form-field>
+</form>
+
+<button (click)= "pageAddItem()" mat-button>addpost</button> 
+
+<button (click)= "mypost()" mat-button>my post</button>
+
+<button (click)= "allpost()" mat-button>all post</button>
+
+
+
+<p *ngIf="svsposts.data && svsUser.data" >
+<mat-accordion *ngFor = "let po of svsposts.data | pipe1 : titel : body : id : userid">
+        <mat-expansion-panel>
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              Post from : {{svsUser.findnamebyid(po.userId)}}
+            </mat-panel-title>
+            <mat-panel-description>
+                post id : {{po.id}}
+            </mat-panel-description>
+          </mat-expansion-panel-header>
+      
+          <card-post [pos]="po"></card-post>
+
+
+
+
+        </mat-expansion-panel>
+        <mat-expansion-panel (opened)="panelOpenState = true"
+                             (closed)="panelOpenState = false">
+                           
+         
+        </mat-expansion-panel>
+      </mat-accordion>
+    </p>
+
+
