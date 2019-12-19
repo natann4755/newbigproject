@@ -7,7 +7,9 @@
         <div class="mat-button-focus-overlay"></div>
     </button>
         <h2 _ngcontent-neo-c512="" focusonnavigation="" tabindex="-1">post</h2>
+        <app-how-mny-users></app-how-mny-users>
 </div>
+
 
 <form class="example-form">
         <mat-form-field class="example-full-width">
@@ -32,8 +34,8 @@
 
 
 
-<p *ngIf="svsposts.data && svsUser.data" >
-<mat-accordion *ngFor = "let po of svsposts.data | pipe1 : titel : body : id : userid">
+<p *ngIf="svsUser.data" >
+<mat-accordion *ngFor = "let po of svsposts.data | async | pipe1 : titel : body : id : userid">
         <mat-expansion-panel>
           <mat-expansion-panel-header>
             <mat-panel-title>

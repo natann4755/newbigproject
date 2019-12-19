@@ -1,0 +1,56 @@
+<div _ngcontent-neo-c512="" class="component-page-header docs-primary-header">
+    <button _ngcontent-neo-c512="" mat-button="" class="sidenav-toggle mat-button mat-button-base">
+        <span class="mat-button-wrapper">
+        </span>
+        <div matripple="" class="mat-button-ripple mat-ripple"></div>
+        <div class="mat-button-focus-overlay"></div>
+    </button>
+        <h2 _ngcontent-neo-c512="" focusonnavigation="" tabindex="-1">add user</h2>
+        <app-how-mny-users></app-how-mny-users>
+</div>
+
+
+
+<div class="example-container">
+    <form [formGroup]="newuser">
+   
+    <mat-form-field>
+      <input formControlName="id" matInput placeholder="Input id ">
+    </mat-form-field> <br>
+    <mat-form-field>
+        <input formControlName="name" matInput placeholder="Input name">
+    </mat-form-field> <br>
+    <mat-form-field>
+        <input formControlName="username" matInput placeholder="Input username">
+    </mat-form-field> <br>
+    <mat-form-field>
+        <input formControlName="email" matInput placeholder="Input email">
+    </mat-form-field>
+
+
+     <div formGroupName="address">
+
+         <mat-form-field>
+            <input formControlName="street" matInput placeholder="Input street ">
+        </mat-form-field> <br>
+        <mat-form-field>
+            <input formControlName="suite" matInput placeholder="Input suite">
+        </mat-form-field> <br>
+        <mat-form-field>
+            <input formControlName="city" matInput placeholder="Input city">
+        </mat-form-field> <br>
+        <mat-form-field>
+            <input formControlName="zipcode" matInput placeholder="Input zipcode">
+        </mat-form-field>
+   
+
+    </div>
+       
+    <br>
+
+    <button (click)= "AddItem()" mat-button>adduser</button>
+  
+</form>
+  </div>
+
+

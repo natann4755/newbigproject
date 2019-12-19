@@ -35,7 +35,7 @@ body {
 p{
     margin: 5% 15% 5% 15%;
 }
-.mat-form-field{
+.mat-form-field , .mat-radio-group{
     background-color: lightslategrey;
 }
 button{
@@ -45,4 +45,12 @@ button{
 }
 form{
     margin: 2%;
+}
+
+.mat-radio-group{
+    padding: 1.5%;
+    margin: 1%;
+}
+.component-page-header{
+    padding-top: 4%
 }

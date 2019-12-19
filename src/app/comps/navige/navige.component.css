@@ -1,4 +1,18 @@
-.component-page-header[_ngcontent-neo-c512] {
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 8px 16px;
+    background: #3f51b5;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 2;
+    color: white;
+}
+
+/* .component-page-header[_ngcontent-neo-c512] {
     display: flex;
     position: fixed;
     align-items: center;
@@ -10,4 +24,4 @@
 }
 button{
     color: black;
-}
+} */

@@ -1,0 +1,66 @@
+<app-navige></app-navige>
+<div _ngcontent-neo-c512="" class="component-page-header docs-primary-header">
+    <button _ngcontent-neo-c512="" mat-button="" class="sidenav-toggle mat-button mat-button-base">
+        <span class="mat-button-wrapper">
+        </span>
+        <div matripple="" class="mat-button-ripple mat-ripple"></div>
+        <div class="mat-button-focus-overlay"></div>
+    </button>
+        <h2 _ngcontent-neo-c512="" focusonnavigation="" tabindex="-1">users</h2>
+        <app-how-mny-users></app-how-mny-users>
+</div>
+
+
+ <form class="example-form">
+       
+        <mat-form-field class="example-full-width">
+             <input (input)="name = $event.target.value" matInput placeholder="serch by name" value="">
+        </mat-form-field>
+        <mat-form-field class="example-full-width">
+            <input (input)="username = $event.target.value" matInput placeholder="serch by username" value="">
+       </mat-form-field>
+        <mat-form-field class="example-full-width">
+            <input (input)="email = $event.target.value" matInput placeholder="serch by email" value="">
+        </mat-form-field>
+        <mat-form-field class="example-full-width">
+            <input (input)="id = $event.target.value" matInput placeholder="serch by id" value="">
+         </mat-form-field>
+</form> 
+
+ <button (click)= "pageAddUser()" mat-button>adduser</button> 
+
+
+
+
+
+
+<p>
+ <mat-accordion *ngFor = "let ue of svsus.data 
+ | async
+ | pipeIncluds : 'name' : name
+ | pipeIncluds : 'username' : username
+ | pipeIncluds : 'email' : email
+ | pipeshave : 'id' : id
+ ">
+        <mat-expansion-panel>
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+             name : {{ue.name}}
+            </mat-panel-title>
+            <mat-panel-description>
+                user id : {{ue.id}}
+            </mat-panel-description>
+          </mat-expansion-panel-header>
+      
+          <app-user [userr]="ue"></app-user>
+
+
+         </mat-expansion-panel>
+        <mat-expansion-panel (opened)="panelOpenState = true"
+                             (closed)="panelOpenState = false">
+                           
+         
+        </mat-expansion-panel>
+      </mat-accordion> 
+    </p> 
+    

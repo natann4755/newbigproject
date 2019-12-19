@@ -1,0 +1,12 @@
+<p>alboms works!</p>
+<ul>
+    <li *ngFor = "let fotos of svspho.data 
+    | async
+    | pipeIncluds : 'title' : title 
+    | pipeshave : 'albumId' : albumId
+    | pipeshave : 'id' : id 
+    ">
+
+
+    </li>
+</ul>

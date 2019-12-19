@@ -15,7 +15,7 @@ export class NavigeComponent implements OnInit {
 
   moveto(page:string){
     console.log(page);
-    this.rot.navigateByUrl(page)
+    this.rot.navigateByUrl(`/${page}`)
   }
 
 }

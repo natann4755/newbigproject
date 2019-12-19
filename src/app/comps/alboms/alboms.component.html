@@ -1,0 +1,68 @@
+<app-navige></app-navige>
+<div _ngcontent-neo-c512="" class="component-page-header docs-primary-header">
+    <button _ngcontent-neo-c512="" mat-button="" class="sidenav-toggle mat-button mat-button-base">
+        <span class="mat-button-wrapper">
+        </span>
+        <div matripple="" class="mat-button-ripple mat-ripple"></div>
+        <div class="mat-button-focus-overlay"></div>
+    </button>
+        <h2 _ngcontent-neo-c512="" focusonnavigation="" tabindex="-1">alboms</h2>
+        <app-how-mny-users></app-how-mny-users>
+</div>
+  
+
+<form class="example-form">
+        <mat-form-field class="example-full-width">
+           <input (input)="userId = $event.target.value" matInput placeholder="serch by userId" value="">
+        </mat-form-field>
+        <mat-form-field class="example-full-width">
+             <input (input)="id = $event.target.value" matInput placeholder="serch by id" value="">
+        </mat-form-field>
+        <mat-form-field class="example-full-width">
+            <input (input)="title = $event.target.value" matInput placeholder="serch by title" value="">
+       </mat-form-field>
+       
+</form>
+
+<!-- <button (click)= "pageAddItem()" mat-button>addpost</button> 
+
+<button (click)= "mypost()" mat-button>my post</button>
+
+<button (click)= "allpost()" mat-button>all post</button>
+
+ --> 
+
+<p *ngIf="svsus.data" >
+<mat-accordion *ngFor = "let alb of svsalb.data 
+| async
+| pipeIncluds : 'title' : title
+| pipeshave : 'userId' : userId
+| pipeshave : 'id' : id
+">
+        <mat-expansion-panel>
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              albom from : {{svsus.findnamebyid(alb.userId)}}
+            </mat-panel-title>
+            <mat-panel-description>
+                albom id : {{alb.id}}
+            </mat-panel-description>
+            <mat-panel-description>
+                user name : {{svsus.findUsernamebyid(alb.userId)}}
+            </mat-panel-description>
+            <mat-panel-description>
+                albom titel : {{alb.title}}
+            </mat-panel-description>
+          </mat-expansion-panel-header>
+
+        </mat-expansion-panel>
+        <mat-expansion-panel (opened)="panelOpenState = true"
+                             (closed)="panelOpenState = false">
+                           
+         
+        </mat-expansion-panel>
+      </mat-accordion>
+    </p>
+
+
+

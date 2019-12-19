@@ -1,7 +1,3 @@
-<app-navige></app-navige>
-
-
-
 <div _ngcontent-neo-c512="" class="component-page-header docs-primary-header">
         <button _ngcontent-neo-c512="" mat-button="" class="sidenav-toggle mat-button mat-button-base">
             <span class="mat-button-wrapper">
@@ -10,6 +6,7 @@
             <div class="mat-button-focus-overlay"></div>
         </button>
             <h2 _ngcontent-neo-c512="" focusonnavigation="" tabindex="-1">todo</h2>
+            <app-how-mny-users></app-how-mny-users>
     </div>
     
     <form class="example-form">
@@ -23,26 +20,26 @@
                 <input (input)="title = $event.target.value" matInput placeholder="serch by title" value="">
            </mat-form-field>
 
-           <mat-radio-group aria-label="Select an option">
-            <mat-radio-button (input)="completed = true" value="1" >true</mat-radio-button>
-            <mat-radio-button (input)="completed = false" value="2" >false</mat-radio-button>
-          </mat-radio-group>
-            <!-- <mat-form-field class="example-full-width">
-                <input (input)="completed = $event.target.value" matInput placeholder="serch by completed" type="checkbox" value="">
-            </mat-form-field> -->
+       
+          
     </form>
 
-<!--     
-    <button (click)= "pageAddItem()" mat-button>addpost</button> 
+
+     <button (click)= "pageAddItem()" mat-button>addtodo</button> 
     
-    <button (click)= "mypost()" mat-button>my post</button>
+    <button (click)= "mypost()" mat-button>my todo</button>
     
-    <button (click)= "allpost()" mat-button>all post</button>  -->
+    <button (click)= "allpost()" mat-button>all todo</button>    
     
+  
     
-    
-    <!-- <p *ngIf="svsto.data && svsus.data" >
-    <mat-accordion *ngFor = "let t of svsto.data | pitodo : userId : id : title : completed">
+     <p *ngIf="svsus.data" >
+    <mat-accordion *ngFor = "let t of svsto.data 
+    | async
+    | pipeIncluds : 'title' : title 
+    | pipeshave : 'userId' : userId 
+    | pipeshave : 'id' : id 
+    ">
             <mat-expansion-panel>
               <mat-expansion-panel-header>
                 <mat-panel-title>
@@ -53,11 +50,8 @@
                 </mat-panel-description>
               </mat-expansion-panel-header>
           
-              <app-todo [tod]="t"></app-todo>
-    
+            <app-todoss [tod]="t"></app-todoss>
               
-    
-    
             </mat-expansion-panel>
             <mat-expansion-panel (opened)="panelOpenState = true"
                                  (closed)="panelOpenState = false">
@@ -67,10 +61,6 @@
           </mat-accordion>
         </p>
     
- -->
-
-
- -->
 
 
 
@@ -78,6 +68,10 @@
 
 
 
+
+
+
+<!-- 
 <form [formGroup]='newtodo' (ngSubmit)="addtodo()">
     <h2>add new to do</h2>
     userId : <input formControlName='userId'> <br>
@@ -92,17 +86,17 @@
 <div>
     <h1>list of all todos</h1>
 
-    <ul *ngIf="svsto.data">
-        <li *ngFor = "let t of svsto.data">
+    <ul>
+        <li *ngFor = "let t of svsto.data | async">
             userId : {{t.userId}} <br>
             id : {{t.id}} <br>
             title : {{t.title}} <br>
             completed : {{t.completed}} <br>
             <br>
         </li>
-    </ul>
+    </ul> -->
 
 
-</div>
+<!-- </div> -->
 
 

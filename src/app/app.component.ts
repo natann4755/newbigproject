@@ -9,6 +9,8 @@ import { LoginService } from './serviss/login.service';
 export class AppComponent {
   title = 'datal';
 
-  constructor(private svslog:LoginService){}
+  constructor(private svslog:LoginService){
+    
+  }
 
 }

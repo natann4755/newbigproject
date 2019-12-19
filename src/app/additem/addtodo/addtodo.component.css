@@ -1,0 +1,29 @@
+.mat-form-field{background-color: rgb(184, 169, 169);}
+.example-container{ margin: 7% 40% 0% 10%;}
+button,.mat-select{
+    background-color: lightslategrey;
+}
+.component-page-header[_ngcontent-neo-c512] {
+  display: flex;
+  align-items: center;
+}
+.docs-primary-header {
+  background: #3f51b5;
+}
+.docs-primary-header {
+  padding-left: 20px;
+}
+.component-page-header{
+  padding-top: 4%
+}
+/* .example-section {
+    display: flex;
+    align-content: center;
+    align-items: center;
+    height: 60px;
+   
+  } */
+  /* p{
+    background-color:rgb(184, 169, 169) ;
+    width: 27%;
+  } */

@@ -3,6 +3,7 @@ import { TodoService } from 'src/app/serviss/todo.service';
 import { FormGroup, FormControl } from '@angular/forms';
 import { Todo } from 'src/app/moduls/todo';
 import { UsersService } from 'src/app/serviss/users.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-todo',
@@ -11,33 +12,35 @@ import { UsersService } from 'src/app/serviss/users.service';
 })
 export class TodoComponent implements OnInit {
 
+
   userId:number
   id: number
-  title: string
+  title: string = ""
   completed: boolean
 
   ngOnInit() {
   }
-
-  newtodo= new FormGroup( { 
-    userId: new FormControl(''),
-    id : new FormControl(''),
-    title: new FormControl(''),
-    completed: new FormControl('')
-  }
-    )
   
     
-  constructor(public svsto:TodoService, public svsus:UsersService) { 
+  constructor(public svsto:TodoService, public svsus:UsersService, public rout:Router) { 
     svsto.data
   }
 
-  addtodo(){
-    let nwextodo:Todo=this.newtodo.value
-    console.log("nwextodo",nwextodo);
-    this.svsto.addItem(nwextodo)
-    }
+  pageAddItem(){
+    this.rout.navigateByUrl("/addtodo")
+  }
+  mypost(){
+    console.log("svsus.myuser.id",this.svsus.myuser.id);
+    
+    this.userId=this.svsus.myuser.id
+  }
 
+  allpost(){
+    this.userId=null
+
+  }
+
+  
   }
 
   

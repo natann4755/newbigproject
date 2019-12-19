@@ -1,0 +1,81 @@
+
+<div _ngcontent-neo-c512="" class="component-page-header docs-primary-header">
+    <button _ngcontent-neo-c512="" mat-button="" class="sidenav-toggle mat-button mat-button-base">
+        <span class="mat-button-wrapper">
+        </span>
+        <div matripple="" class="mat-button-ripple mat-ripple"></div>
+        <div class="mat-button-focus-overlay"></div>
+    </button>
+        <h2 _ngcontent-neo-c512="" focusonnavigation="" tabindex="-1">photot</h2>
+        <app-how-mny-users></app-how-mny-users>
+</div>
+
+<!-- 
+
+
+<button (click)= "pageAddItem()" mat-button>addpost</button> 
+
+<button (click)= "mypost()" mat-button>my post</button>
+
+<button (click)= "allpost()" mat-button>all post</button> -->
+
+
+<!--  
+<p>
+<mat-accordion *ngFor = "let pho of svspho.data 
+| async ">
+        <mat-expansion-panel>
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+                Photo title : {{pho.title}}  
+            </mat-panel-title>
+            <mat-panel-description>
+                Photo id : {{pho.id}}  
+            </mat-panel-description>
+          </mat-expansion-panel-header>
+      
+          <app-photo></app-photo>
+            <card-post [pos]="po"></card-post> 
+
+
+
+
+        </mat-expansion-panel>
+        <mat-expansion-panel (opened)="panelOpenState = true"
+                             (closed)="panelOpenState = false">
+                           
+         
+        </mat-expansion-panel>
+      </mat-accordion>
+    </p>   -->
+    <form class="example-form">
+        <mat-form-field class="example-full-width">
+           <input (input)="albumId = $event.target.value" matInput placeholder="serch by albumId" value="">
+        </mat-form-field>
+        <mat-form-field class="example-full-width">
+             <input (input)="id = $event.target.value" matInput placeholder="serch by id" value="">
+        </mat-form-field>
+        <mat-form-field class="example-full-width">
+            <input (input)="title = $event.target.value" matInput placeholder="serch by title" value="">
+       </mat-form-field>
+      
+</form>
+
+<button (click)= "pageAddphoto()" mat-button>addphoto</button> 
+
+
+<ul>
+    <li *ngFor = "let pho of svspho.data 
+    | async
+    | pipeIncluds : 'title' : title 
+    | pipeshave : 'albumId' : albumId
+    | pipeshave : 'id' : id 
+    ">
+    album id : {{pho.albumId}} <br>
+    Photo id : {{pho.id}} <br>
+    Photo title : {{pho.title}} <br>
+    <img src="{{pho.url}}" > <br>
+</li>
+</ul>
+
+

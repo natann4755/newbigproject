@@ -9,7 +9,19 @@ import { HttpClient } from '@angular/common/http';
 export class PostsService extends BaseService <Posts>{
 
 
+  tenpos:Posts[]=[]
+  posttt:Posts[] 
+
   constructor(http:HttpClient) {
     super(http,"posts")
+   }
+
+   lastTenPost(){
+    this.posttt = this.data.value
+    console.log("post",this.posttt);
+    for (let i = this.posttt.length-10; i <= this.posttt.length-1; i++) {
+        this.tenpos.push(this.posttt[i])
+    }
+    console.log("tenpos",this.tenpos);
    }
 }

@@ -1,2 +1,67 @@
-<p>homepage works!</p>
-<app-navige></app-navige>
+
+<div _ngcontent-neo-c512="" class="component-page-header docs-primary-header">
+    <button _ngcontent-neo-c512="" mat-button="" class="sidenav-toggle mat-button mat-button-base">
+        <span class="mat-button-wrapper">
+        </span>
+        <div matripple="" class="mat-button-ripple mat-ripple"></div>
+        <div class="mat-button-focus-overlay"></div>
+    </button>
+        <h2 _ngcontent-neo-c512="" focusonnavigation="" tabindex="-1"> wellcome to hoompage</h2>
+        <app-how-mny-users></app-how-mny-users>
+</div>
+
+
+
+
+<!-- <button (click)= "cli()" mat-button>to shoo 10 last posts</button>
+<div *ngIf="svsposts.posttt" class="ul2"> -->
+    
+    <div >
+        <h1>last 10 photos</h1>
+       
+        <ul class="ul1">
+            <li class="li1" *ngFor = "let potos of svsphotos.tenPhotose">
+               <p class="titel">{{potos.id}}-{{potos.title}}</p> <br>
+                <img src="{{potos.url}}"><br>
+            </li>
+        </ul>
+   
+        </div>
+
+
+
+
+    <div class="dss">
+    <h1>lest 10 posts</h1>
+    <p>
+        
+        <mat-accordion *ngFor = "let pos of svsposts.tenpos">
+                <mat-expansion-panel>
+                  <mat-expansion-panel-header>
+                    <mat-panel-title>
+                      Post from : {{svsus.findnamebyid(pos.userId)}}
+                    </mat-panel-title>
+                    <mat-panel-description>
+                        post id : {{pos.id}}
+                    </mat-panel-description>
+                  </mat-expansion-panel-header>
+              
+                  <card-post [pos]="pos"></card-post>
+        
+        
+        
+        
+                </mat-expansion-panel>
+                <mat-expansion-panel (opened)="panelOpenState = true"
+                                     (closed)="panelOpenState = false">
+                                   
+                 
+                </mat-expansion-panel>
+              </mat-accordion>
+            </p>
+        </div>
+            
+        
+        
+    
+
