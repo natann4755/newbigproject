@@ -1,7 +1,9 @@
-.mat-form-field{background-color: rgb(184, 169, 169);}
+.mat-form-field{background-color: rgb(184, 169, 169);
+    }
 .example-container{ margin: 7% 40% 0% 10%;}
 button,.mat-select{
     background-color: lightslategrey;
+ 
 }
 .component-page-header[_ngcontent-neo-c512] {
     display: flex;
@@ -15,4 +17,8 @@ button,.mat-select{
 }
 .component-page-header{
     padding-top: 4%
+}
+body {
+    font-family: Roboto,"Helvetica Neue Light","Helvetica Neue",Helvetica,Arial,"Lucida Grande",sans-serif;
+    margin: 0;
 }
