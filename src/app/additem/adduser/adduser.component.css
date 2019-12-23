@@ -1,6 +1,6 @@
 .mat-form-field{background-color: rgb(184, 169, 169);
     }
-.example-container{ margin: 7% 40% 0% 10%;}
+.example-container{ margin: 7% 20% 0% 20%;}
 button,.mat-select{
     background-color: lightslategrey;
  
@@ -21,4 +21,10 @@ button,.mat-select{
 body {
     font-family: Roboto,"Helvetica Neue Light","Helvetica Neue",Helvetica,Arial,"Lucida Grande",sans-serif;
     margin: 0;
+}
+.mat-form-field{
+    width: 89%;
+}
+.bb{
+    margin-left: 38%
 }

@@ -61,9 +61,10 @@ form{
     transition: all 4s;
 }
 .titel{
-    position:absolute; 
+    position:absolute;
+    margin-top: 2%; 
     right: 9%;
-    top: 10%;  
+    top: 5%;  
 }
 .li1.shoo{
     left: 0%;  
