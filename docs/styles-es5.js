@@ -304,8 +304,8 @@
           \*************************************************************************************************/
         /*! no static exports found */
         /***/ (function (module, exports, __webpack_require__) {
-            __webpack_require__(/*! /home/student/Desktop/angular/lessens/lessen 3/newbigproject/node_modules/@angular/material/prebuilt-themes/pink-bluegrey.css */ "./node_modules/@angular/material/prebuilt-themes/pink-bluegrey.css");
-            module.exports = __webpack_require__(/*! /home/student/Desktop/angular/lessens/lessen 3/newbigproject/src/styles.css */ "./src/styles.css");
+            __webpack_require__(/*! /home/student/Desktop/Neiman/AngularFinalProject/node_modules/@angular/material/prebuilt-themes/pink-bluegrey.css */ "./node_modules/@angular/material/prebuilt-themes/pink-bluegrey.css");
+            module.exports = __webpack_require__(/*! /home/student/Desktop/Neiman/AngularFinalProject/src/styles.css */ "./src/styles.css");
             /***/ 
         })
     }, [[3, "runtime"]]]);
